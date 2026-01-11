@@ -1,0 +1,1450 @@
+/*Generales*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif, 'Intel One Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+
+.fijo {
+    position: fixed;
+    left: 1vw;
+    top: 75vh;
+    z-index: 1000;
+}
+
+.fijo img {
+    width: 20%;
+}
+
+.ir-arriba {
+    display: inline-block;
+    padding: 1% 2%;
+    background: #00000099;
+    font-size: -1%;
+    color: #fff;
+    text-align: start;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+}
+
+#check {
+    display: none;
+}
+
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+    background-color: green;
+}
+
+/*Header*/
+
+header {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+header .logo {
+    padding-left: 15px;
+    margin: 0;
+    height: 100px;
+}
+
+header .container {
+    background: rgb(37, 107, 2);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.boton {
+    display: flex;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+header nav ul {
+    flex-basis: 100%;
+    flex-grow: 1;
+    transition: height 0ms 1s, opacity 1s 0ms;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    line-height: 27px;
+    padding-bottom: 13px;
+}
+
+header nav ul li a {
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    color: #c3fb6a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+#check:checked~ul {
+    height: auto;
+    opacity: 1;
+    animation: none 1s;
+}
+
+/* Estilo base */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    /* Para que quede horizontal */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Submenú oculto */
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* justo debajo del Portafolio */
+    left: 0;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li ul.submenu li {
+    display: block;
+    /* vertical */
+}
+
+nav ul li ul.submenu li a {
+    padding: 10px;
+    color: #000000;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+nav ul li ul.submenu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Mostrar menú al pasar mouse */
+nav ul li.dropdown:hover>ul.submenu {
+    display: block;
+}
+
+
+/*PORTADA*/
+
+
+
+
+.fondo,
+#f-nosotros {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    margin: auto;
+    place-items: center;
+
+}
+
+.portada-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo :after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.085);
+}
+
+#f-nosotros :after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.151);
+}
+
+.fondo h1,
+#f-nosotros h1 {
+    text-align: center;
+}
+
+.carousel .fondo .carousel-text {
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.carousel .fondo h1 {
+    font-size: 40px;
+}
+
+.carousel .fondo p {
+    font-size: 20px;
+}
+
+
+#carrusel1 {
+    height: 90vh;
+    background-image: url("../images/pulpa-fruta-fondo.png");
+
+    div {
+
+        height: 90vh;
+    }
+
+}
+
+
+#carrusel2 {
+    height: 90vh;
+    background-image: url("../images/fruta-congelada-fondo.png");
+
+    div {
+
+        height: 90vh;
+    }
+
+}
+
+
+#carrusel3 {
+    height: 90vh;
+    background-image: url("../images/deshidratado-fondo.jpg");
+
+    div {
+
+        height: 90vh;
+    }
+
+}
+
+#carrusel4 {
+    height: 90vh;
+    background-image: url("../images/harinas-fondo3.png");
+
+    div {
+
+        height: 90vh;
+    }
+
+}
+
+#f-nosotros {
+    height: 50vh;
+    background-image: url("../images/fundo.jpg");
+
+    div {
+        width: 90%;
+        height: 50vh;
+
+        h1 {
+            font-size: 28px;
+            line-height: 52px;
+            font-family: 'Franklin Gothic Demi', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+            font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+}
+
+.f-categoria {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    div {
+        font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+        text-align: justify;
+
+        padding: 0 25px;
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+}
+
+
+.f-categoria .iconos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+    img {
+        width: 30px;
+    }
+
+
+}
+
+.f-categoria .iconos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.f-categoria .intro-categoria {
+    margin: 0 auto;
+}
+
+#f-pulpa-fruta {
+    background-image: url("../images/pulpa-fruta-fondo.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 70vh;
+}
+
+#f-fruta-congelada {
+    background-image: url("../images/fruta-congelada-fondo.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 70vh;
+}
+
+#f-deshidratado {
+    background-image: url("../images/deshidratado-fondo2.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 70vh;
+}
+
+#f-harinas {
+    background-image: url("../images/harinas-fondo3.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 70vh;
+}
+
+
+
+/*Introduccion*/
+
+#intro .container {
+    text-align: center;
+    padding: 150px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    h2 {
+        font-size: 35px;
+    }
+
+    p {
+        padding-bottom: 20px;
+        font-size: 20px;
+        width: 80%;
+    }
+}
+
+
+
+
+
+/*Productos*/
+#productos {
+    h2 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+#productos h4 {
+    padding-top: 50%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+#productos a {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-bottom: 50%;
+    padding: 6px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+
+#productos .item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    gap: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+
+
+}
+
+#productos .pulpa-fruta {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)), url("../images/mango-pulpa.png");
+}
+
+#productos .fruta-congelada {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)), url("../images/fresa-entera.png");
+}
+
+#productos .deshidratado {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)), url("../images/deshidratado.png");
+}
+
+#productos .harinas {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)), url("../images/h-guanabana.png");
+}
+
+#productos .container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+}
+
+/*pilares y video*/
+
+#pilares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 0 25px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    div {
+        padding: 25px;
+        border: 3.5px dashed #79767670;
+
+        h2,
+        p {
+            padding-bottom: 25px;
+        }
+    }
+}
+
+#pilares #sostenibilidad {
+    font-size: 30px;
+}
+
+#video {
+    span {
+        font-size: 1.7em;
+        font-weight: bold;
+        text-align: center;
+        background-color: white;
+        margin: 50px 20px;
+        padding: 50px 50px;
+    }
+}
+
+#video .container div {
+    width: 80%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#video .container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+#video .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    background-image: url("../images/frontis.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px 0px 50px 0px;
+}
+
+/*Pagina Filosofia*/
+
+.filosofia {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    line-height: 40px;
+    margin: 50px;
+
+}
+
+.filosofia img {
+    width: 100%;
+}
+
+.filosofia p {
+    text-shadow: 0.5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Portafolio*/
+
+.productos .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.25fr 0.2fr 1fr;
+    text-align: justify;
+    place-items: center;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 25px;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.productos .container .titulo-producto {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.productos .container .imagen-toggle {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.productos .container .concepto-producto {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.productos .container .detalle-nutricional {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* Para transicion de la img del producto a otra*/
+
+.imagen-toggle {
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px;
+    /* opcional */
+    margin: .5rem;
+}
+
+.imagen-toggle input {
+    display: none;
+    /* ocultar checkbox */
+}
+
+/* label actúa como “contenedor” visible */
+.imagen {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--ratio, 16/9);
+    /* puedes sobrescribir --ratio en cada bloque */
+    background-image: var(--img1);
+    background-size: contain;
+    /* muestra la imagen completa */
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: background-image .25s ease, background-color .25s ease;
+}
+
+/* hover temporal */
+.imagen:hover {
+    background-image: var(--img2);
+}
+
+/* click/fijo: input marcado -> cambia la imagen usando selector adyacente */
+.imagen-toggle input:checked+label.imagen {
+    background-image: var(--img2);
+}
+
+
+
+/* Noticias*/
+
+.noticias a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.noticias a:visited {
+    color: green;
+    /* enlace visitado */
+}
+
+.noticias-detalle a:visited {
+    color: green;
+    /* enlace visitado */
+}
+
+.noticia {
+    background-color: #f3fff0;
+    min-height: 100vh
+}
+
+.noticia .fondo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 50%;
+
+    h1 {
+        font-size: 30px;
+        text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.noticias div {
+    margin: auto;
+    text-align: center;
+
+}
+
+.noticias h1 {
+    text-align: center;
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.blog img {
+    width: 250px;
+    height: 150px;
+
+}
+
+.blog h2 {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.blog p {
+    font-size: 15px;
+    margin: 0 15px;
+    text-align: justify;
+}
+
+.blog .noticia-principal {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.blog .noticia-a {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.blog .noticia-b {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.blog .noticia-c {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#f-noticia1 {
+    height: 50vh;
+    background-image: url("../images/expoferia2.jpg");
+}
+
+#f-noticia2 {
+    height: 50vh;
+    background-image: url("../images/compostaje-portada.jpg");
+}
+
+#f-noticia3 {
+    height: 50vh;
+    background-image: url("../images/guanabana-portada.jpg");
+}
+
+#f-noticia4 {
+    height: 50vh;
+    background-image: url("../images/gestion-residuos.jpg");
+}
+
+
+.video {
+    width: 80%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    padding-bottom: 50px;
+}
+
+.blog-detalle {
+    text-align: justify;
+    margin: 50px auto;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 16px;
+    }
+
+    ;
+
+    img {
+        width: 60%;
+        margin-top: 50px;
+    }
+}
+
+
+.blog-desarrollo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contacto*/
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+
+    button {
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        width: 80%;
+        font-size: 20px;
+        margin: auto;
+    }
+}
+
+.contacto .datos-empresa {
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+form {
+    width: 100%;
+
+}
+
+form div {
+    padding-bottom: 20px;
+}
+
+form input {
+    width: 200px;
+    /* o en %, rem, etc. */
+    height: 20px;
+}
+
+form textarea {
+    width: 200px;
+    height: 100px;
+}
+
+.maps {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*Footer*/
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(98, 101, 99);
+    color: white;
+
+    img {
+        width: 35px;
+
+    }
+
+}
+
+#footer .logo {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+
+    img {
+        width: 150px;
+    }
+}
+
+
+
+#footer .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-size: 80%;
+}
+
+
+
+#footer .media {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-size: 20px;
+        padding-bottom: 25px;
+    }
+
+    div {
+        padding-bottom: 25px;
+    }
+
+}
+
+@media (min-width:600px) {
+
+    #productos .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #productos .item {
+        margin-bottom: 0;
+    }
+
+    .blog img {
+        width: 400px;
+        height: 250px;
+
+    }
+
+    .contacto form input {
+        width: 400px;
+        /* o en %, rem, etc. */
+        height: 20px;
+    }
+
+    .contacto form textarea {
+        width: 400px;
+        height: 100px;
+    }
+
+    #footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #footer.logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #footer .media {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #footer .datos-empresa {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .ir-arriba {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #pilares {
+        width: 70%;
+        margin: 0 auto;
+        place-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .f-categoria .iconos {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .fondo div {
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .noticia .fondo div {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .productos .container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 0.2fr 0.8fr 1fr;
+        text-align: justify;
+        place-items: center;
+        margin: 0 auto;
+        max-width: 80%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .productos .container .titulo-producto {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .productos .container .imagen-toggle {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productos .container .concepto-producto {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .productos .container .detalle-nutricional {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .filosofia img {
+        width: 500px;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+    header .container {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    header nav ul {
+        overflow: visible;
+        opacity: 100;
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
+
+    header nav ul li {
+        padding: 0px 15px;
+        justify-content: space-between;
+
+    }
+
+    .boton {
+        display: none;
+    }
+
+    .fondo h1 {
+        font-size: 3em;
+    }
+
+    #productos .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        margin: 100px;
+    }
+
+    #productos .item {
+        width: 100%;
+        height: auto;
+    }
+
+    #pilares {
+        width: 90%;
+        flex-direction: row;
+    }
+
+    #video .container div {
+        padding-bottom: 450px;
+        width: 660px;
+    }
+
+    #video .container iframe {
+        width: 660px;
+        height: 415px;
+    }
+
+    .filosofia {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+
+        .valores {
+            grid-column: 1 / 3;
+            grid-row: 1;
+
+        }
+
+        .mision {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .vision {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .compromiso {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+    }
+
+    #f-nosotros {
+        div {
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .productos .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.5fr;
+        margin: 0 auto;
+        max-width: 60%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .productos .container .titulo-producto {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .productos .container .imagen-toggle {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .productos .container .concepto-producto {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .productos .container .detalle-nutricional {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .f-categoria {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 50vh;
+    }
+
+    .blog {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blog .noticia-principal {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .blog .noticia-a {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .blog .noticia-b {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .blog .noticia-c {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
+    .video {
+        padding-bottom: 450px;
+        width: 660px;
+    }
+
+    .video iframe {
+        width: 660px;
+        height: 415px;
+    }
+
+    .noticia .fondo div {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+}
+
+@media (min-width:1300px) {
+
+    .blog {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blog .noticia-principal {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .blog .noticia-a {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .blog .noticia-b {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .blog .noticia-c {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .blog p {
+        font-size: 20px;
+    }
+
+    .blog h2 {
+        font-size: 40px;
+    }
+
+    .noticia .fondo div {
+        h1 {
+            font-size: 48px;
+        }
+    }
+
+    .contacto {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 70vh;
+
+        .form {
+            margin: auto;
+        }
+    }
+
+    form div {
+        padding-bottom: 20px;
+    }
+
+    form input {
+        width: 500px;
+        /* o en %, rem, etc. */
+        height: 40px;
+    }
+
+    form textarea {
+        width: 500px;
+        height: 200px;
+    }
+
+    #footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    animation: fade 1s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.carousel-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-text button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-text button:hover {
+    background: #333;
+}
+
+.carousel-controls {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}

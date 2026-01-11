@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampiñaFru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="logo Campiña Fru" class="logo" />
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="boton">
+                <img src="images/menu.png" width="30px"></img>
+            </label>
+            <ul class="menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="pages/filosofia.html"> Filosofía</a></li>
+                <li class="dropdown">
+                    <a href="#">Portafolio ▾</a>
+                    <ul class="submenu">
+                        <li><a href="pages/portafolio/pulpa-fruta.html">Pulpa de fruta</a></li>
+                        <li><a href="pages/portafolio/fruta-congelada.html">Fruta congelada</a></li>
+                        <li><a href="pages/portafolio/deshidratado.html">Fruta deshidratada</a></li>
+                        <li><a href="pages/portafolio/harinas.html">Harinas</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/noticias/index-noticias.html">Noticias</a></li>
+                <li><a href="pages/contacto.html">Contáctanos!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section >
+            <div class="carousel">
+                <div class="slides">
+
+                    <!-- Slide 1 -->
+                    <div class="slide fondo active" id="carrusel1">
+                        <div class="carousel-text">
+                            <h1>Pulpa de frutas congelada</h1>
+                            <p>La mejor fruta hecha pulpa.</p>
+                            <a href="pages/portafolio/pulpa-fruta.html#pulpa-fruta">
+                                <button>Míralos aquí!</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide fondo" id="carrusel2">
+                        <div class="carousel-text">
+                            <h1>Fruta congelada entera</h1>
+                            <p>Elaborada con frutas de selección.</p>
+                            <a href="pages/portafolio/fruta-congelada.html#fruta-congelada">
+                                <button>Descúbrelas!</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide fondo" id="carrusel3">
+                        <div class="carousel-text">
+                            <h1>Fruta deshidratada</h1>
+                            <p>Snacks saludables para disfrutar.</p>
+                            <a href="pages/portafolio/deshidratado.html#deshidratado">
+                                <button>Míralos aquí!</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide fondo" id="carrusel4">
+                        <div class="carousel-text">
+                            <h1>Harinas</h1>
+                            <p>Para la preparación de tus comidas favoritas.</p>
+                            <a href="pages/portafolio/harinas.html#harinas">
+                                <button>Míralos aquí!</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botones -->
+                <div class="carousel-controls">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro">
+            <div class="container">
+                <h2>AMAMOS LO QUE HACEMOS</h2>
+                <p>CAMPIÑA FRU J.S. inició actividades comerciales el 26/01/2013 en la ciudad de Santa María, provincia de Huaura, departamento de Lima</p>
+                <p>Nos especializamos en la transformación y comercialización de pulpas de frutas, dirigida al sector alimentario y de consumo masivo. Nos enfocamos en brindar productos naturales y seguros, garantizando estándares de calidad en cada etapa del proceso productivo.</p>
+                <a href="pages/filosofia.html#f-nosotros"><button>Conocenos!</button></a>
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2>CATEGORIAS</h2>
+            <div class="container">
+
+                <div class="item pulpa-fruta">
+                    <h4>Pulpa de fruta congelada</h4>
+                    <a href="pages/portafolio/pulpa-fruta.html#pulpa-fruta">Ver más</a>
+                </div>
+
+                <div class="item fruta-congelada">
+                    <h4>Fruta congelada entera</h4>
+                    <a href="pages/portafolio/fruta-congelada.html#fruta-congelada">Ver más</a>
+                </div>
+                <div class="item deshidratado">
+                    <h4>Fruta deshidratada</h4>
+                    <a href="pages/portafolio/deshidratado.html#deshidratado">Ver más</a>
+                </div>
+                <div class="item harinas">
+                    <h4>Harinas</h4>
+                    <a href="pages/portafolio/harinas.html#harinas">Ver más</a>
+                </div>
+
+
+        </section>
+        <section id="pilares">
+            <div>
+                <h2 id="sostenibilidad">SOSTENIBILIDAD</h2>
+                <p>Contribuimos al desarrollo de las generaciones presentes y futuras, así como en nuestro entorno.</p>
+                <img src="images/sostenibilidad.png" width="70px"></img>
+            </div>
+
+            <div>
+                <h2>FAMILIA</h2>
+                <p>Somos una gran familia, estamos comprometidos con la excelencia y dinamismo en todo lo que hacemos.
+                </p>
+                <img src="images/familia.png" width="70px"></img>
+            </div>
+            <div>
+                <h2>TALENTO</h2>
+                <p>Nuestra cultura se enfoca en el talento humano y en la calidad y excelencia de todas nuestras
+                    operaciones.</p>
+                <img src="images/talento.png" width="70px"></img>
+            </div>
+        </section>
+
+        <section id="video">
+            <div class="container">
+                <span>¡CAMPINA FRU J.S., LA MEJOR FRUTA HECHA PULPA!</span>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6tt7fvLHDHM?si=BGROvZL2V2eSwQNG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="fijo">
+        <a href="https://wa.me/51977190250/?text=Hola,%20quiero%20saber%20más%20sobre%20tus%20productos"
+            target="_blank">
+            <img src="images/whatsapp.png" alt="icono de whatsapp" />
+        </a>
+    </div>
+    <a href="#top">
+        <span class="ir-arriba">
+            <i class="fa-solid fa-angle-up" alt="icono de ir-arriba"></i>
+        </span>
+    </a>
+    <footer id="footer">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="logo Campiña Fru" />
+            </a>
+            <div class="media">
+                <span>Síguenos en:</span>
+                <div>
+                    <a href="https://wa.me/51977190250/?text=Hola,%20quiero%20saber%20más%20sobre%20tus%20productos"
+                        target="_blank">
+                        <img src="images/whatsapp.png" alt="wap" />
+                    </a>
+                    <a href="https://www.instagram.com/campinafrulima/" target="_blank">
+                        <img src="images/instagram.png" alt="ig" />
+                    </a>
+                    <a href="https://www.facebook.com/CampiJS" target="_blank">
+                        <img src="images/facebook.png" alt="fb" />
+                    </a>
+                </div>
+            </div>
+            <div class="datos-empresa">
+                <p>Teléfono: +51 977 190 250<br> Dirección: Av. Perú 1460 - Santa María – Huaura – Lima – Perú
+                    <br>Correo: campinafrujs@gmail.com
+                </p>
+            </div>
+        </div>
+        <span>&copy;Copyright 2025 CampiñaFru</span>
+    </footer>
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+                slide.classList.add("active");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlideFunc() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    next.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlideFunc);
+
+    // Cambio automático cada 5 segundos
+    setInterval(nextSlide, 5000);
+</script>
+
+</body>
+
+</html>
